@@ -11,7 +11,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-left">
-                <h1 class="logo">NIT-HAMIRPUR</h1>
+                <h1 class="logo">Campus Kart</h1>
                 <div class="search-bar">
                     <input type="text" id="searchInput" placeholder="Search for anything" class="search-input">
                     <button class="search-btn" id="searchBtn">
@@ -67,10 +67,10 @@
 
                 <div class="filter-group">
                     <label class="filter-label">Price Range</label>
-                    <input type="range" id="priceRange" min="0" max="100000" value="100000" class="price-slider">
+                    <input type="range" id="priceRange" min="0" max="10000" value="10000" class="price-slider">
                     <div class="price-display">
                         <span>₹0</span>
-                        <span>₹<span id="priceValue">100000</span></span>
+                        <span>₹<span id="priceValue">10000</span></span>
                     </div>
                 </div>
 
@@ -168,7 +168,7 @@
                             <option value="electronics">Electronics</option>
                             <option value="furniture">Furniture</option>
                             <option value="services">Services</option>
-                            <option value="vehicles">Vehicles</option>
+                            
                             <option value="realestate">Real Estate</option>
                             <option value="clothing">Clothing</option>
                         </select>
@@ -249,7 +249,56 @@
 
     <!-- Toast Notification -->
     <div id="toast" class="toast"></div>
+     <section class="contact-section">
+    <div class="contact-container">
+      <div class="coordinators">
+        <h2>Event Coordinators</h2>
+        <p><strong>Adit Keshav:</strong> 📞 7696036584</p>
+        <p><strong>Arushi Sharma:</strong> 📞 9015332550</p>
+        <p><strong>Khushi Choudhary:</strong> 📞 8619017631</p>
+        <p><strong>Email Us:</strong> 25bme006@nith.ac.in , 25bme017@nith.ac.in , 25bec056@nith.ac.in</a></p>
+      </div>
+      <div class="message-form">
+        <h2>Send a Message</h2>
+        <form id="contactForm">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <textarea placeholder="Your message..." required></textarea>
+          <button type="submit" class="animated-button">
+            ✉️ SEND MESSAGE
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
 
+<footer>
+        <div class="footer-content">
+            <p class="copyright-text">
+                &copy;2026 <a href="https://nith.ac.in" target="_blank">NIT HAMIRPUR</a>. 
+                All rights reserved. Crafted with <span class="heart">❤️</span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Optional: Add current year dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const copyrightText = document.querySelector('.copyright-text');
+            
+            // If you want to update year dynamically, uncomment below:
+            copyrightText.innerHTML = `&copy;${currentYear} <a href="https://nith.ac.in" target="_blank">NIT HAMIRPUR</a>. All rights reserved. Crafted with <span class="heart">❤️</span>`;
+        });
+        const heart = document.querySelector('.heart');
+        heart.addEventListener('click', function() {
+            this.style.animation = 'none';
+            setTimeout(() => {
+                this.style.animation = 'heartbeat 1.5s ease-in-out infinite';
+            }, 10);
+        });
+    </script>
+    
     <script src="mainpage.js"></script>
 </body>
 </html>
